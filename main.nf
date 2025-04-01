@@ -41,7 +41,7 @@ process Trim {
     """
 }
 
-process Star {
+process StarMap {
 
 
     input:
@@ -93,6 +93,6 @@ workflow {
     Download(params.accession)
     Dump(Download.out)
     Trim(Dump.out)
-    Star(Trim.out,index_ch)
-    FeatureCounts(Star.out,reference_ch)
+    StarMap(Trim.out,index_ch)
+    FeatureCounts(StarMap.out,reference_ch)
 }
