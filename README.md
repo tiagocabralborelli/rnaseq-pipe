@@ -26,12 +26,11 @@ mv nextflow  ~/anaconda3/envs/bio/bin
 ```
 
 ## 5. Create the index from the reference genome 
-
 ```
 STAR --runThreadN 12 --runMode genomeGenerate --genomeDir indice_star --genomeFastaFiles reference/GCA_001910725.1_ASM191072v1_genomic.fna --sjdbGTFfile reference/augustus.gtf --sjdbOverhang 100 --genomeSAindexNbases 11 --sjdbGTFfeatureExon "CDS" --sjdbGTFtagExonParentTranscript "transcript_id" --sjdbGTFtagExonParentGene "gene_id" 
 ```
 
-## 5. Run the pipeline
+## 6. Run the pipeline
  ```
  nextflow run main.nf --accession 
  ```
