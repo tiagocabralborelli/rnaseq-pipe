@@ -53,7 +53,7 @@ process StarMap {
 
     script:
     """
-    STAR --runThreadN 12 --genomeDir ${index_star} --readFilesIn ${fastq_file} --outFileNamePrefix ${fastq_file}_ --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM --outSAMattributes Standard
+    STAR --runThreadN 12 --genomeDir ${index_star} --readFilesIn ${fastq_file} --outFileNamePrefix ${fastq_file}_ --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM --outSAMattributes Standard --limitBAMsortRAM 1633233784    
     """
 }
 
